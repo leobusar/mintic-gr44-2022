@@ -63,6 +63,25 @@ public class Ciclos {
         
         return s;
     }
+    
+    public static void imprimir(int n){
+    
+        for(int i=n; i> 0; i--){
+            System.out.print(i+" ");
+        }
+    }
+    
+    public static void colecciones(){
+        String[] frutas = new String[]{"Tomate de arbol", "Maracuyá", "Guayaba", "Lulo", "Guanabana"};
+        
+        for (String elem:frutas ){
+            if(elem.equals("Lulo")){
+                break;
+            }
+            System.out.println(elem);
+        }
+        
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -78,8 +97,10 @@ public class Ciclos {
         //System.out.println(minMaquina());
         
         //login();
-        System.out.println("Ingrese el número de dígitos");
-        int num = sc.nextInt();
-        System.out.println(suma(num));
+        //System.out.println("Ingrese el número de dígitos");
+        //int num = sc.nextInt();
+        //System.out.println(suma(num));
+        //imprimir(num);
+        colecciones();
     }
 }
