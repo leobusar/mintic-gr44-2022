@@ -53,9 +53,20 @@ public class Ciclos {
         
         return Xo;
     }
+    
+    public static int suma(int n){
+        int s = 0; 
+        
+        for(int i = 0; i <= n ;i++){
+            s += i; // s  = s + i
+        }
+        
+        return s;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         //System.out.println("Digite la letra: ");
         //char letra = sc.nextLine().charAt(0);
         //int i = 0;
@@ -66,6 +77,9 @@ public class Ciclos {
         
         //System.out.println(minMaquina());
         
-        login();
+        //login();
+        System.out.println("Ingrese el número de dígitos");
+        int num = sc.nextInt();
+        System.out.println(suma(num));
     }
 }
