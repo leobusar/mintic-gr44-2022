@@ -43,6 +43,13 @@ public class Ciclos {
     
     }
     
+    public static void imparesPares(){
+    
+        for(int i = 1; i <=1000; i+=2 ){
+            System.out.println(i+" "+ (i+1));
+        }
+    }
+    
     public static double minMaquina() {
         double Xo = 1; 
         double Xi = 1/(double)2;
@@ -101,6 +108,7 @@ public class Ciclos {
         //int num = sc.nextInt();
         //System.out.println(suma(num));
         //imprimir(num);
-        colecciones();
+        //colecciones();
+        imparesPares();
     }
 }
