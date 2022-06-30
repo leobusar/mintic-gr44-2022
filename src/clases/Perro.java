@@ -26,9 +26,18 @@ public class Perro {
     public void ladrar() {
         System.out.println("Guau Guau");
     }
+    
+    public void saludar() {
+        System.out.println("Hola, mi nombre es " + nombre);
+    }
 
-    public void saludar(Persona persona) {
-        System.out.println("Hola "+persona.nombre+", mi nombre es " + nombre);
+    public void saludar(String nombre) {
+        System.out.println("Hola "+nombre+", mi nombre es " + this.nombre);
+    }
+
+    public void saludar(int n) {
+        for (int i = 0; i < n; i++)
+            ladrar();
     }
     
     public void quienEsMayor(Perro otro){
