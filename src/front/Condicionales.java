@@ -21,12 +21,13 @@ public class Condicionales {
     
     public static double valorAbsoluto2(double x) { 
               
-        if (x >= 0){
+        /*if (x >= 0){
             return x;
         } else {
             return -x;
-        }
+        }*/
         
+        return (x >= 0)? x : -x;
     }
     
     public static double maximo(double x, double y) {
