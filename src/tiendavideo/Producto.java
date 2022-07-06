@@ -9,9 +9,9 @@ package tiendavideo;
  * @author leobusta
  */
 public class Producto {
-    String nombre;
-    double precio;
-    String codigo;
+    private String nombre;
+    private double precio;
+    private String codigo;
 
     public Producto(String nombre, double precio, String codigo) {
         this.nombre = nombre;

@@ -11,9 +11,9 @@ import java.util.Scanner;
  * @author leobusta
  */
 public class TiendaVideo {
-    String nombre;
-    Producto[] productos;
-    int ultimo;
+    private String nombre;
+    private Producto[] productos;
+    private int ultimo;
     
     TiendaVideo(String nombre){
         productos = new Producto[100];
@@ -40,7 +40,8 @@ public class TiendaVideo {
         String[] comandoArr = comando.split("&");  
 
         /*
-            1&nombre&precio&codigo
+            1&nombre&precio&codigo  // 1&Libro&nombre&precio&codigo&nro_paginas
+                                    // 1&Pelicula&nombre&precio&codigo&duracion
             2 Listar
             3 Salir
         */
@@ -48,13 +49,22 @@ public class TiendaVideo {
         int opcion = Integer.parseInt(comandoArr[0]);
         
         switch(opcion){
-            case 1: 
-                String nombre = comandoArr[1];
-                double precio = Double.parseDouble(comandoArr[2]);
-                String codigo = comandoArr[3];
-                Producto product = new Producto(nombre,precio,codigo);
-                agregarProducto(product);
-                
+            case 1:
+                String tipo = comandoArr[1];
+                String nombre = comandoArr[2];
+                double precio = Double.parseDouble(comandoArr[3]);
+                String codigo = comandoArr[4];
+                /*Producto product = new Producto(nombre,precio,codigo);
+                agregarProducto(product);*/
+                if( tipo.equals("Libro")){
+                    int n = Integer.parseInt(comandoArr[5]);
+                    Libro libro = new Libro(n,nombre,precio,codigo);
+                    agregarProducto(libro);
+                } else {
+                    double duracion = Double.parseDouble(comandoArr[5]);
+                    Pelicula peli = new Pelicula(duracion,nombre,precio,codigo);
+                    agregarProducto(peli);
+                }                
                 break;
                 
             case 2:
