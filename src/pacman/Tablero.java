@@ -37,7 +37,4 @@ public class Tablero {
         this.nivel = nivel;
     }
     
-    
-    
-    
 }
