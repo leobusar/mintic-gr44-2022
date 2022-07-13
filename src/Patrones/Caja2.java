@@ -8,15 +8,16 @@ package Patrones;
  *
  * @author leobusta
  */
-public class Caja {
 
-    protected Object obj;
+public class Caja2 <T> {
 
-    public Caja(Object obj) {
+    protected T obj;
+
+    public Caja2(T obj) {
         this.obj = obj;
     }
-    
-    public Object obtener(){ 
+
+    public T obtener() {
         return obj;
     }
 
@@ -29,4 +30,5 @@ public class Caja {
         linea += "*";
         return linea + "\n*" + s + "*\n" + linea;
     }
+
 }
